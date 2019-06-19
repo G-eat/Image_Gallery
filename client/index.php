@@ -35,7 +35,7 @@ $albums = $query->fetchAll();
                     <span aria-hidden="true">&times;</span>
                   </button>
                 </form>
-                <img src="../images/<?php echo $album['album_image'] ?>" class="card-img-top" alt="There is no album images.">
+                <img src="../images/<?php echo $album['album_image'] ?>" class="card-img-top" alt="There is no album images." data-id="<?php echo $album['name'] ?>" data-toggle="modal" data-keyboard="false" data-backdrop="static" data-target="#exampleModal2" id='example2'>
                 <div class="card-body d-flex flex-column">
                   <h5 class="card-title"><?php echo $album['name'] ?></h5>
                   <hr>
@@ -59,7 +59,7 @@ $albums = $query->fetchAll();
           <!-- call modal to create albums -->
           <div class="col-4 mt-3">
             <div class="card h-100" style="width: 20rem;">
-              <img src="https://banner2.kisspng.com/20180514/usq/kisspng-computer-icons-plus-sign-clip-art-5af97b2328bf59.1562244915262994271669.jpg" class="card-img-top" alt="...">
+              <img src="https://banner2.kisspng.com/20180514/usq/kisspng-computer-icons-plus-sign-clip-art-5af97b2328bf59.1562244915262994271669.jpg" class="card-img-top" alt="..." data-toggle="modal" data-target="#exampleModal">
               <div class="card-body d-flex flex-column">
                 <h5 class="card-title">Add Album</h5>
                 <p class="card-text">Create new album.</p>
