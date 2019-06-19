@@ -54,19 +54,4 @@
         return $file_ary;
     }
 
-
-    // $name = $_POST['name'];
-    // $description = $_POST['description'];
-    // $file =  uniqid('', true) . '-' .$_FILES["file"]["name"];
-    //
-    // $file_destination = '../images/'.$file;
-    // move_uploaded_file($_FILES['file']['tmp_name'],$file_destination);
-    //
-    // $mysql = "INSERT INTO `albums`(`name`, `description`,`album_image`) VALUES (?,?,?)";
-    // $query = $pdo->prepare($mysql);
-    // $query->execute([$name,$description,$file]);
-    //
-    // header("Location: ../client/index.php");
-
-
  ?>

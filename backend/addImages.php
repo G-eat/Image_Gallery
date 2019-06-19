@@ -1,6 +1,6 @@
 <?php
     include_once("../config/connect.php");
-    
+
     if ($_FILES['file']) {
       $file_ary = reArrayFiles($_FILES['file']);
 
@@ -36,20 +36,4 @@
 
         return $file_ary;
     }
-
-
-
-    // $name = $_POST['hidden'];
-    // $file = $_FILES["file"]["name"];
-    //
-    // $file_destination = '../photos/'.$file;
-    // move_uploaded_file($_FILES['file']['tmp_name'],$file_destination);
-    //
-    // $mysql = "INSERT INTO `images`(`album_name`, `image_name`) VALUES (?,?)";
-    // $query = $pdo->prepare($mysql);
-    // $query->execute([$name,$file]);
-    //
-    // header("Location: ../client/index.php");
-
-
  ?>

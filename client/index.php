@@ -46,7 +46,7 @@ $albums = $query->fetchAll();
                     <button type="button" data-id="<?php echo $album['name'] ?>" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal1"  id='example'>
                       Add Photo
                     </button>
-                    <button type="button" data-id="<?php echo $album['name'] ?>" class="btn btn-info" data-toggle="modal" data-target="#exampleModal2" id='example2'>
+                    <button type="button" data-id="<?php echo $album['name'] ?>" class="btn btn-info" data-toggle="modal" data-keyboard="false" data-backdrop="static" data-target="#exampleModal2" id='example2'>
                       All photos
                     </button>
                   </div>
@@ -55,6 +55,8 @@ $albums = $query->fetchAll();
             </div>
           <?php endforeach; ?>
 
+
+          <!-- call modal to create albums -->
           <div class="col-4 mt-3">
             <div class="card h-100" style="width: 20rem;">
               <img src="https://banner2.kisspng.com/20180514/usq/kisspng-computer-icons-plus-sign-clip-art-5af97b2328bf59.1562244915262994271669.jpg" class="card-img-top" alt="...">
@@ -139,7 +141,7 @@ $albums = $query->fetchAll();
 
     <!-- modal all photos -->
     <div class="modal fade bd-example-modal-lg" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog" role="document">
+      <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
           <div class="modal-header">
             <h5 class="modal-title" id="name"></h5>
@@ -153,18 +155,10 @@ $albums = $query->fetchAll();
                 <div class="carousel-item active">
                   <img class="d-block w-100" src="../albumPhotos/AllPhotos.jpg" alt="First slide">
                 </div>
-                <div id='prov'>
+                <!-- album photos -->
+                <div id='allalbumphotos'>
 
                 </div>
-                <!-- <div class="carousel-item">
-                  <img class="d-block w-100" src="https://images.pexels.com/photos/414612/pexels-photo-414612.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="Second slide">
-                </div>
-                <div class="carousel-item">
-                  <img class="d-block w-100" src="https://images.pexels.com/photos/248797/pexels-photo-248797.jpeg?auto=format%2Ccompress&cs=tinysrgb&dpr=1&w=500" alt="Third slide">
-                </div>
-                <div class="carousel-item">
-                  <img class="d-block w-100" src="https://www.w3schools.com/w3css/img_lights.jpg" alt="Third slide">
-                </div> -->
               </div>
               <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -176,14 +170,7 @@ $albums = $query->fetchAll();
               </a>
             </div>
           </div>
-          <!-- <div class="modal-footer">
-            <br><br><br>
-            <ol class="carousel-indicators">
-              <img  width="50px" height="50px" src="https://www.opencollege.info/wp-content/uploads/2016/02/relaxation-skills.jpg" data-target="#carouselExampleIndicators" data-slide-to="0" class="img-thumbnail"></img>
-              <img width="50px" height="50px" src="https://www.opencollege.info/wp-content/uploads/2016/02/relaxation-skills.jpg"  data-target="#carouselExampleIndicators" data-slide-to="1"></img>
-              <img data-target="#carouselExampleIndicators" data-slide-to="2"></img>
-            </ol>
-          </div> -->
+          <br><br>
         </div>
       </div>
     </div>

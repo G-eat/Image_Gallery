@@ -20,17 +20,11 @@ $(document).ready(function(){
             dataType:'JSON',
             success: function(result){
               result.forEach(function (image) {
-                // let num = '';
-                // if (num == 0) {
-                //   $('#image').attr("src", "../albumPhotos/"+image.image_name)
-                //   console.log(image.id);
-                //   num == 1;
-                // }
                 let img = $(`<img class="d-block w-100" id="${image.id}">`);
                 img.attr('src', `../albumPhotos/${image.image_name}`);
                 let div = $(`<div class="carousel-item"></div>`);
                 img.appendTo(div);
-                div.appendTo('#prov');
+                div.appendTo('#allalbumphotos');
                 console.log(image.image_name);
               });
               console.log(result);
@@ -38,7 +32,7 @@ $(document).ready(function(){
   });
 
   $(document).on("click", "#reset", function () {
-    $('#prov').empty();
+    window.location = "../client/index.php";
   });
 
 });
